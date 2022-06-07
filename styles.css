@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    font-family: 'Roboto', sans-serif;
+    --text-primary: #030303;
+    --text-secondary: #333333;
+    --separator:  1px solid #cecdcd;
+    --big: 45px;
+    --medium: 30px;
+    --normal: 20px;
+    --small: 18px;
+    scroll-behavior: smooth;
+}
+
+h1{
+    color: var(--text-primary);
+    font-size: var(--big);
+}
+
+h2,h3,h4,.navigation a{
+    color: var(--text-secondary);
+    font-size: var(--normal);
+}
+p, p a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+.meter {
+    position: relative;
+}
+.percentage-show {
+    background-color: var(--text-secondary);
+    display: flex;
+    opacity: 0;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 8px;
+    position: absolute;
+    top: 0px;
+    transition: ease-out 0.5s;
+}
+.percentage-show:hover {
+    display: flex;
+    opacity: 1;
+}
+.percentage-show h4 {
+    color: #eee;
+    display: flex;
+}
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 999999px;
+    width: 220px;
+    height: 10px;
+}
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 99999px;
+}
+progress[value]::-webkit-progress-value {
+    background: var(--text-primary);
+    border-radius: 99999px;
+}
+progress[value]:hover {
+  display: none;
+}
+.wrapper {
+    margin: 35px;
+    padding: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+header{
+    border-bottom: var(--separator);
+}
+.heading {
+    display: flex;
+    width: 200px;
+    padding: 35px;
+    text-transform: uppercase;
+}
+.sub-heading, nav {
+    display: flex;
+    padding: 35px;
+    width: 100%;
+}
+.navigation {
+    display: none;
+}
+.navigation li{
+    padding: 0 20px;
+    list-style: none;
+}
+.navigation a{
+    text-decoration: none;
+}
+.cv-body {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+.cv-body_block1{
+    height: 100%;
+    width: 35%;
+    margin: 20px 0;
+    padding: 35px;
+    border-right: var(--separator);
+
+}
+.cv-body_block2{
+    height: 100%;
+    padding: 35px;
+    margin: 20px 0;
+}
+.section-heading {
+    text-transform: uppercase;
+    font-size: var(--medium);
+    line-height: 2;
+    margin-bottom: 35px;
+}
+.section-heading .underlined{
+    border-bottom: 3px solid var(--text-secondary);
+}
+.section-sub_heading {
+    text-transform: uppercase;
+    font-size: var(--normal);
+    margin-bottom: 5px;
+}
+.sections ul li{
+    list-style: none;
+    margin-bottom: 25px;
+}
+.subsection-list {
+    margin: 15px 0 15px 35px;
+}
+.employment-studies li {
+    margin-top: 15px;
+    margin-left: 25px;
+    color: var(--text-primary);
+}
+.employment-studies p{
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.employment-studies p>a{
+    border-bottom: 1px solid var(--text-secondary);
+    cursor: pointer;
+    font-weight: 400;
+}
+.employment-studies li:last-child{
+    margin-bottom: 50px;
+}
+.subsection-sub_heading {
+    text-transform: uppercase;
+    font-size: var(--small);
+    margin-bottom: 5px;
+}
+
+.sections-separator {
+    margin: 35px 0;
+    border-bottom: var(--separator);
+}
+.head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+footer {
+    padding-top: 35px;
+    border-top: var(--separator);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 760px) {
+    .wrapper {
+        margin: 0;
+        padding: 15px;
+        box-shadow: none;
+    }
+    .navigation {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .navigation li a {
+        font-size: var(--small);
+    }
+    .cv-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .cv-body_block1{
+        height: 100%;
+        width: 100%;
+        border-bottom: var(--separator);
+        border-right: none;
+    }
+    .head {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+}
